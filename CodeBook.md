@@ -13,15 +13,6 @@ activityName
 		STANDING
 		LAYING
 
-activityID
-	Activity ID
-		1. WALKING
-		2. WALKING_UPSTAIRS
-		3. WALKING_DOWNSTAIRS
-		4. SITTING
-		5. STANDING
-		6. LAYING
-
 tBodyAcc_mean_X
 	The mean body acceleration time domain signal along the X axis, averaged over multiple observations
 		-1..1

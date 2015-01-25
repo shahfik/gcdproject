@@ -63,9 +63,10 @@ merged <- rbindlist(list(xTest,xTrain))[,cols,with=FALSE]
 setkey(merged,activityID,subjectID)
 setkey(activities,activityID)
 HARdataset <- merged[activities,]
-
+HARdataset <- subset(HARdataset, select=-activityID)
 
 # STEP 5: Creates a second, independent tidy data set with the average of each
 # variable for each activity and each subject.
 avgHARdataset = copy(HARdataset[,lapply(.SD,mean),by="subjectID,activityName"])
+
 write.table(avgHARdataset, file="./avgHARdataset.txt", row.names=FALSE, col.names=TRUE, sep="\t", quote=FALSE)
